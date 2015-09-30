@@ -1,35 +1,29 @@
 {{!< default}}
 {{#post}}
 <article class="{{post_class}}">
-
-    <div class="container limit-width">
-        <div class="page-header">
-            <h1>{{title}}</h1>
-            <time>{{date format="MMMM Mo, YYYY"}}</time>
-        </div>
-
+  <div class="container limit-width">
+		<div class="image-wrapper">
+			{{#if image}}
+			<img src="{{image}}" alt="thumbnail" />
+			{{else}}
+			<img src="{{asset "images/empty.png"}}" alt="thumbnail" style="height: 0px;" />
+			{{/if}}
+		</div>
+    <h1>{{title}}</h1>
 		{{content}}
 
 		<div class="post-bottom-info">
-			<div class="tags">
-				{{#foreach tags}}
-				<a href="{{url}}" class="label label-info">{{name}}</a>
-				{{/foreach}}
-			</div>
-
 			<!-- Share post -->
 			{{> addons/share}}
 		</div>
-    </div>
+  </div>
 </article>
-
-{{> prev_next_post}}
 
 <!-- Comments -->
 <section class="comment">
-    <div class="container limit-width">
-	   {{> addons/comment}}
-    </div>
+  <div class="container limit-width">
+   {{> addons/comment}}
+  </div>
 </section>
 
 {{/post}}
