@@ -2,20 +2,26 @@
 {{#post}}
 <article class="{{post_class}}">
   <div class="container limit-width">
-		<div class="image-wrapper">
-			{{#if image}}
-			<img src="{{image}}" alt="thumbnail" />
-			{{else}}
-			<img src="{{asset "images/empty.png"}}" alt="thumbnail" style="height: 0px;" />
-			{{/if}}
-		</div>
-    <h1>{{title}}</h1>
-		{{content}}
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-6">
+        <div class="image-wrapper">
+          {{#if image}}
+          <img src="{{image}}" alt="thumbnail" />
+          {{else}}
+          <img src="{{asset "images/empty.png"}}" alt="thumbnail" style="height: 0px;" />
+          {{/if}}
+        </div>
+        <h1>{{title}}</h1>
+        {{content}}
 
-		<div class="post-bottom-info">
-			<!-- Share post -->
-			{{> addons/share}}
-		</div>
+        <div class="post-bottom-info">
+          <!-- Share post -->
+          {{> addons/share}}
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
   </div>
 </article>
 
