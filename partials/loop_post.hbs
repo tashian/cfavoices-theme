@@ -2,13 +2,13 @@
 	<div class="thumbnail">
 		<div class="image-wrapper">
 			{{#if image}}
-			<img src="{{image}}" alt="thumbnail" />
+			<a href="{{url}}"><img src="{{image}}" alt="thumbnail" /></a>
 			{{else}}
 			<img src="{{asset "images/empty.png"}}" alt="thumbnail" style="height: 0px;" />
 			{{/if}}
 		</div>
 		<div class="caption">
-			<h3>{{{title}}}</h3>
+			<a href="{{url}}"><h3>{{{title}}}</h3></a>
 			<p>{{content}}</p>
 		</div>
 	</div>
