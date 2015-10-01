@@ -43,7 +43,7 @@
                 {{^}}
                     <a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
                 {{/if}}
-                <h3>{{@blog.description}}</h3>
+                
 
             </div>
 
@@ -53,6 +53,7 @@
     </nav>
 
 	{{! Everything else gets inserted here }}
+    <h3 class="blog-description">{{@blog.description}}</h3>
     {{{body}}}
 
     {{> footer}}
